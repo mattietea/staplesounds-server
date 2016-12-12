@@ -1,0 +1,11 @@
+{
+  "db": {
+    "host": "ds119598.mlab.com",
+    "port": 19598,
+    "database": "staplesounds",
+    "password": "Fglyxb03",
+    "name": "db",
+    "connector": "mongodb",
+    "user": "admin"
+  }
+}
