@@ -1,6 +1,6 @@
 'use strict';
 
-var installed = true;
+var installed = true ;
 
 module.exports = function (app) {
 
