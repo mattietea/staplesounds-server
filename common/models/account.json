@@ -3,7 +3,7 @@
   "base": "User",
   "idInjection": true,
   "options": {
-    "validateUpsert": false
+    "validateUpsert": true
   },
   "properties": {
     "firstName": {
@@ -18,7 +18,7 @@
   "validations": [],
   "relations": {
     "favorites": {
-      "type": "hasMany",
+      "type": "hasAndBelongsToMany",
       "model": "Song",
       "foreignKey": ""
     }
@@ -27,9 +27,37 @@
     {
       "accessType": "EXECUTE",
       "principalType": "ROLE",
-      "principalId": "$authenticated",
+      "principalId": "administrator",
       "permission": "ALLOW",
       "property": "POST"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "update"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "__create__favorites"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "__get__favorites"
     }
   ],
   "methods": {}

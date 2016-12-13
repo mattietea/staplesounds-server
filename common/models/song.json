@@ -24,10 +24,6 @@
     "download": {
       "type": "string"
     },
-    "id": {
-      "type": "string",
-      "id": true
-    },
     "url": {
       "type": "string",
       "required": true
@@ -40,6 +36,10 @@
     "genres": {
       "type": "object",
       "required": true
+    },
+    "id": {
+      "type": "string",
+      "id": true
     }
   },
   "validations": [],
