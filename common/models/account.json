@@ -18,9 +18,13 @@
   "validations": [],
   "relations": {
     "favorites": {
-      "type": "hasAndBelongsToMany",
+      "type": "embedsMany",
       "model": "Song",
-      "foreignKey": ""
+      "property": "favorites",
+      "options": {
+        "validate": false,
+        "forceId": false
+      }
     }
   },
   "acls": [
@@ -43,21 +47,21 @@
       "principalType": "ROLE",
       "principalId": "$owner",
       "permission": "ALLOW",
-      "property": "update"
+      "property": "WRITE"
     },
     {
       "accessType": "EXECUTE",
       "principalType": "ROLE",
-      "principalId": "$owner",
-      "permission": "ALLOW",
-      "property": "__create__favorites"
-    },
-    {
-      "accessType": "EXECUTE",
-      "principalType": "ROLE",
-      "principalId": "$owner",
+      "principalId": "$authenticated",
       "permission": "ALLOW",
       "property": "__get__favorites"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "__create__favorites"
     }
   ],
   "methods": {}

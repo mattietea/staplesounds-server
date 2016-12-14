@@ -36,21 +36,11 @@
     "genres": {
       "type": "object",
       "required": true
-    },
-    "id": {
-      "type": "string",
-      "id": true
     }
   },
   "validations": [],
   "relations": {},
   "acls": [
-    {
-      "accessType": "*",
-      "principalType": "ROLE",
-      "principalId": "administrator",
-      "permission": "ALLOW"
-    },
     {
       "accessType": "*",
       "principalType": "ROLE",
@@ -61,6 +51,12 @@
       "accessType": "READ",
       "principalType": "ROLE",
       "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "administrator",
       "permission": "ALLOW"
     }
   ],
