@@ -1,6 +1,7 @@
 {
   "name": "Song",
   "base": "PersistedModel",
+  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
@@ -36,6 +37,10 @@
     "genres": {
       "type": "object",
       "required": true
+    },
+    "id": {
+      "type": "string",
+      "id": true
     }
   },
   "validations": [],

@@ -36,7 +36,9 @@
   },
   "Song": {
     "dataSource": "db",
-    "public": true
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   },
   "Account": {
     "dataSource": "db",
