@@ -1,7 +1,7 @@
 {
   "name": "Account",
   "base": "User",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
@@ -22,7 +22,7 @@
       "model": "Song",
       "property": "favorites",
       "options": {
-        "validate": false,
+        "validate": true,
         "forceId": false
       }
     }
