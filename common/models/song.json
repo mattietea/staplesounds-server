@@ -41,6 +41,10 @@
     "id": {
       "type": "string",
       "id": true
+    },
+    "rank": {
+      "type": "number",
+      "default": 0
     }
   },
   "validations": [],
@@ -50,7 +54,7 @@
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
-      "permission": "DENY"
+      "permission": "ALLOW"
     },
     {
       "accessType": "READ",

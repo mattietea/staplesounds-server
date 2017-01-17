@@ -6,6 +6,7 @@
     "password": "Fglyxb03",
     "name": "db",
     "connector": "mongodb",
-    "user": "admin"
+    "user": "admin",
+    "allowExtendedOperators": true
   }
 }

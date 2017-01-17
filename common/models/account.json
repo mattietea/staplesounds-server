@@ -13,6 +13,11 @@
     "lastName": {
       "type": "string",
       "required": true
+    },
+    "admin": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   },
   "validations": [],
